@@ -8,29 +8,3 @@ body  {
 
   padding: auto;
 }
-.imgs{
-  margin:0.5em;
-}
-  /* Show one image on devices under 540px */
-  @media screen and (max-width: 540px) {
-    .imgs{
-     width: 100%;
-     float:left;
-    }
- }
-
- /* Show three images on devices between 550 and 800px wide */
- @media screen and (min-width: 540px) and (max-width: 800px) {
-    .imgs{
-     width: 33.333%;
-     float:left;
-    }
- }
-
- /* Show five images on devices between 800px and 1180pxwide */
- @media screen and (min-width: 800px) and (max-width: 1180px) {
-    .imgs{
-     width: 20%;
-     float:left;
-    }
- }

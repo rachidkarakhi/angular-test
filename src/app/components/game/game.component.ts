@@ -5,6 +5,7 @@ import { GameService } from 'src/app/services/game.service';
 import { interval} from 'rxjs';
 
 @Component({
+
   selector: 'app-game',
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css']
