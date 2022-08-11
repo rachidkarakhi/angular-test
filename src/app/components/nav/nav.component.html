@@ -1,0 +1,16 @@
+<div class="topnav" id="myTopnav">
+  <!-- <a (click)="filter('top')" [ngClass]="{'active': active=='top'}">Top games</a>
+  <a (click)="filter('new')" [ngClass]="{'active': active=='new'}">New games</a>
+  <a (click)="filter('slots')" [ngClass]="{'active': active=='slots'}">Slots</a>
+  <a (click)="filter('jackpots')" [ngClass]="{'active': active=='jackpots'}">Jackpots</a>
+  <a (click)="filter('live')" [ngClass]="{'active': active=='live'}">Live</a>
+  <a (click)="filter('blackjack')" [ngClass]="{'active': active=='blackjack'}">Blackjack</a>
+  <a (click)="filter('roulette')" [ngClass]="{'active': active=='roulette'}">Roulette</a>
+  <a (click)="filter('table')" [ngClass]="{'active': active=='table'}">Table</a>
+  <a (click)="filter('poker')" [ngClass]="{'active': active=='poker'}">Poker</a>
+  <a   (click)="filter('other')" [ngClass]="{'active': active=='other'}">Other</a> -->
+  <a *ngFor="let categorie of categories" [ngClass]="{'active': active==categorie}" (click)="updateActive(categorie)">{{ categorie }}</a>
+  <a href="javascript:void(0);" class="icon" (click)="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>

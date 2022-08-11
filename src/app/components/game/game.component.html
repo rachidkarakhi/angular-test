@@ -1,54 +1,11 @@
-<div class="topnav" id="myTopnav">
-  <a (click)="filter('top')" [ngClass]="{'active': active=='top'}">Top games</a>
-  <a (click)="filter('new')" [ngClass]="{'active': active=='new'}">New games</a>
-  <a (click)="filter('slots')" [ngClass]="{'active': active=='slots'}">Slots</a>
-  <a (click)="filter('jackpots')" [ngClass]="{'active': active=='jackpots'}">Jackpots</a>
-  <a (click)="filter('live')" [ngClass]="{'active': active=='live'}">Live</a>
-  <a (click)="filter('blackjack')" [ngClass]="{'active': active=='blackjack'}">Blackjack</a>
-  <a (click)="filter('roulette')" [ngClass]="{'active': active=='roulette'}">Roulette</a>
-  <a (click)="filter('table')" [ngClass]="{'active': active=='table'}">Table</a>
-  <a (click)="filter('poker')" [ngClass]="{'active': active=='poker'}">Poker</a>
-  <a   (click)="filter('other')" [ngClass]="{'active': active=='other'}">Other</a>
-  <a href="javascript:void(0);" class="icon" (click)="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-<!-- <div class="container">
-  <div *ngFor="let game of showedGames" class=" box">
-    <img class="imgs"   [src]="game.image" >
-    <div class="middle">
-      <div class="text"><button class="btn">play</button></div>
-    </div>
-    <div class="ribbon ribbon-top-right" *ngIf="game.categories.includes('new')&& active!='new'"><span>NEW</span></div>
-    <div class="ribbon ribbon-top-right" *ngIf="game.categories.includes('top')&& active!='top'"><span>TOP</span></div>
-    <div class="ribbon ribbon-top-right" *ngIf="game.categories.includes('top')&& active!='top'&&game.categories.includes('new')&& active!='new'"><span>TOP&NEW</span></div>
-    <div *ngIf="game.amount" class="text-block">
-      £ {{game.amount}}
-    </div>
-  </div>
-
-  <div *ngIf="showedGames.length==0" class="alert">
-    There are no games in this category.
-  </div>
-</div> -->
 <div class="container">
   <div class="grid-container">
     <div class="grid-item" *ngFor="let game of showedGames">
-      <div class="box" style="width: '90%';height: '90%'">
-        <img  class="imgs" style="width: '100%';height: '100%';border-radius: 10%;" alt="fzeuhj"   [src]="game.image" >
-        <div class="ribbon ribbon-top-right" *ngIf="game.categories.includes('new')&& active!='new'"><span>NEW</span></div>
-        <div class="ribbon ribbon-top-right" *ngIf="game.categories.includes('top')&& active!='top'"><span>TOP</span></div>
-        <div class="ribbon ribbon-top-right" *ngIf="game.categories.includes('top')&& active!='top'&&game.categories.includes('new')&& active!='new'"><span>TOP&NEW</span></div>
-        <div *ngIf="game.amount" class="text-block">
-          £ {{game.amount}}
-        </div>
-        <div class="middle">
-        <div class="text"><button class="btn">play</button></div>
-        <span style="color:rgb(255, 255, 255)">{{game.name}}</span>
-      </div>
-      </div>
-
+      <app-game-item [showedGame]="game" [active]="active"></app-game-item>
   </div>
+  </div>
+  <div *ngIf="showedGames.length==0" class="alert">
+    There are no games in this category.
   </div>
 </div>
 

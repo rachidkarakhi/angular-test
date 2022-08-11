@@ -1,0 +1,14 @@
+<div class="box" style="width: '90%';height: '100%'">
+  <img  class="imgs" style="width: '100%';height: '100%';border-radius: 10%;" alt="fzeuhj"   [src]="showedGame.image" >
+  <div class="ribbon ribbon-top-right" *ngIf="showedGame.categories.includes('new')&& active!='new'"><span>NEW</span></div>
+  <div class="ribbon ribbon-top-right" *ngIf="showedGame.categories.includes('top')&& active!='top'"><span>TOP</span></div>
+  <div class="ribbon ribbon-top-right" *ngIf="showedGame.categories.includes('top')&& active!='top'&&showedGame.categories.includes('new')&& active!='new'"><span>TOP&NEW</span></div>
+  <div *ngIf="showedGame.amount" class="text-block">
+    £ {{showedGame.amount}}
+  </div>
+  <div class="middle">
+  <div class="text"><button class="btn">play</button></div>
+  <span style="color:rgb(255, 255, 255)">{{showedGame.name}}</span>
+</div>
+</div>
+{{showedGame.name}}
