@@ -6,14 +6,12 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { NavComponent } from './components/nav/nav.component';
-import { GameItemComponent } from './components/game-item/game-item.component';
 import { GameModule } from './game-module/game.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
-    GameItemComponent
+    NavComponent
   ],
   imports: [
     BrowserModule,

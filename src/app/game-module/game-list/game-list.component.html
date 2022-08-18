@@ -1,1 +1,10 @@
-<p>kjdfjzhvfdmzl,flzl</p>
+<div class="container">
+  <div class="grid-container">
+    <div class="grid-item" *ngFor="let game of showedGames">
+      <game-item [showedGame]="game" [active]="active"></game-item>
+  </div>
+  </div>
+  <div *ngIf="showedGames.length==0" class="alert">
+    There are no games in this category.
+  </div>
+</div>
